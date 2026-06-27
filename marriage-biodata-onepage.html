@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marriage Biodata</title>
+  <style>
+    :root {
+      --navy: #0F172A;
+      --royal: #1E3A8A;
+      --gold: #D4AF37;
+      --gold-lt: #F0D060;
+      --gold-pale: #FDF8E7;
+      --white: #fff;
+      --cream: #FDFCF8;
+      --text: #1a1a2e;
+      --mid: #374151;
+      --muted: #6b7280;
+      --gborder: rgba(212, 175, 55, .30);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100vh;
+      background: #d4d7dc;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px 0;
+      font-family: 'Georgia', serif;
+    }
+
+    /* EXACT A4 SIZE */
+    .page {
+      width: 210mm;
+      height: 297mm;
+      background: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content {
+      position: absolute;
+      top: 15mm;
+      left: 15mm;
+      right: 15mm;
+      bottom: 15mm;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      z-index: 2;
+    }
+
+    .body,
+    .hdr,
+    .ftr {
+      width: calc(100% + 60px);
+      transform: translateX(-30px);
+    }
+
+    /* GOLDEN FLOWER BORDER OVERLAY */
+    .page::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 100;
+      background:
+        /* top-left corner */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Cg fill='%23D4AF37' opacity='0.85'%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3Cellipse cx='12' cy='22' rx='3' ry='6' fill='%23D4AF37'/%3E%3Cellipse cx='12' cy='2' rx='3' ry='6' fill='%23D4AF37'/%3E%3Cellipse cx='22' cy='12' rx='6' ry='3' fill='%23D4AF37'/%3E%3Cellipse cx='2' cy='12' rx='6' ry='3' fill='%23D4AF37'/%3E%3Cellipse cx='19' cy='19' rx='3' ry='6' transform='rotate(45 19 19)' fill='%23D4AF37'/%3E%3Cellipse cx='5' cy='19' rx='3' ry='6' transform='rotate(-45 5 19)' fill='%23D4AF37'/%3E%3Cellipse cx='19' cy='5' rx='3' ry='6' transform='rotate(-45 19 5)' fill='%23D4AF37'/%3E%3Ccircle cx='12' cy='12' r='3' fill='%23F0D060'/%3E%3C/g%3E%3C/svg%3E") no-repeat top left,
+        /* top-right corner */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Cg fill='%23D4AF37' opacity='0.85'%3E%3Ccircle cx='78' cy='12' r='4'/%3E%3Cellipse cx='78' cy='22' rx='3' ry='6' fill='%23D4AF37'/%3E%3Cellipse cx='78' cy='2' rx='3' ry='6' fill='%23D4AF37'/%3E%3Cellipse cx='88' cy='12' rx='6' ry='3' fill='%23D4AF37'/%3E%3Cellipse cx='68' cy='12' rx='6' ry='3' fill='%23D4AF37'/%3E%3Cellipse cx='85' cy='19' rx='3' ry='6' transform='rotate(45 85 19)' fill='%23D4AF37'/%3E%3Cellipse cx='71' cy='19' rx='3' ry='6' transform='rotate(-45 71 19)' fill='%23D4AF37'/%3E%3Cellipse cx='85' cy='5' rx='3' ry='6' transform='rotate(-45 85 5)' fill='%23D4AF37'/%3E%3Ccircle cx='78' cy='12' r='3' fill='%23F0D060'/%3E%3C/g%3E%3C/svg%3E") no-repeat top right,
+        /* bottom-left corner */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Cg fill='%23D4AF37' opacity='0.85'%3E%3Ccircle cx='12' cy='78' r='4'/%3E%3Cellipse cx='12' cy='88' rx='3' ry='6' fill='%23D4AF37'/%3E%3Cellipse cx='12' cy='68' rx='3' ry='6' fill='%23D4AF37'/%3E%3Cellipse cx='22' cy='78' rx='6' ry='3' fill='%23D4AF37'/%3E%3Cellipse cx='2' cy='78' rx='6' ry='3' fill='%23D4AF37'/%3E%3Cellipse cx='19' cy='85' rx='3' ry='6' transform='rotate(45 19 85)' fill='%23D4AF37'/%3E%3Cellipse cx='5' cy='85' rx='3' ry='6' transform='rotate(-45 5 85)' fill='%23D4AF37'/%3E%3Cellipse cx='19' cy='71' rx='3' ry='6' transform='rotate(-45 19 71)' fill='%23D4AF37'/%3E%3Ccircle cx='12' cy='78' r='3' fill='%23F0D060'/%3E%3C/g%3E%3C/svg%3E") no-repeat bottom left,
+        /* bottom-right corner */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Cg fill='%23D4AF37' opacity='0.85'%3E%3Ccircle cx='78' cy='78' r='4'/%3E%3Cellipse cx='78' cy='88' rx='3' ry='6' fill='%23D4AF37'/%3E%3Cellipse cx='78' cy='68' rx='3' ry='6' fill='%23D4AF37'/%3E%3Cellipse cx='88' cy='78' rx='6' ry='3' fill='%23D4AF37'/%3E%3Cellipse cx='68' cy='78' rx='6' ry='3' fill='%23D4AF37'/%3E%3Cellipse cx='85' cy='85' rx='3' ry='6' transform='rotate(45 85 85)' fill='%23D4AF37'/%3E%3Cellipse cx='71' cy='85' rx='3' ry='6' transform='rotate(-45 71 85)' fill='%23D4AF37'/%3E%3Cellipse cx='85' cy='71' rx='3' ry='6' transform='rotate(-45 85 71)' fill='%23D4AF37'/%3E%3Ccircle cx='78' cy='78' r='3' fill='%23F0D060'/%3E%3C/g%3E%3C/svg%3E") no-repeat bottom right;
+    }
+
+    /* SVG flower border as an absolute overlay */
+    .flower-border {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 99;
+    }
+
+    /* HEADER */
+    .hdr {
+      background: linear-gradient(135deg, #6e121d, #9f1f28);
+      padding: 5mm 8mm 4mm;
+      display: flex;
+      align-items: center;
+      gap: 5mm;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hdr .photo-ring {
+      width: 50mm;
+      height: 50mm;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background: conic-gradient(#F4D36B, #D4AF37, #F4D36B);
+      padding: 1.5pt;
+      cursor: pointer;
+    }
+
+    .hdr .photo-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #6d0f19;
+      border: 2pt solid #6d0f19;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hdr .gold-rule {
+      background: linear-gradient(90deg, transparent, #F4D36B, transparent);
+    }
+
+    .hdr .pill {
+      background: rgba(255, 255, 255, .12);
+      border: .5pt solid rgba(244, 211, 107, .55);
+      color: #fff;
+    }
+
+    .photo-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: none;
+    }
+
+    .photo-ph {
+      color: var(--gold);
+      font-size: 8pt;
+      text-align: center;
+    }
+
+    .photo-ph span {
+      font-size: 20pt;
+      display: block;
+    }
+
+    .hdr-info {
+      flex: 1;
+    }
+
+    .hdr-eyebrow {
+      font-size: 9pt;
+      color: var(--gold);
+      letter-spacing: 3px;
+      font-family: Arial;
+      margin-bottom: 1mm;
+    }
+
+    .hdr-name {
+      font-size: 22pt;
+      color: white;
+      font-weight: bold;
+      line-height: 1.1;
+    }
+
+    .hdr-sub {
+      font-size: 10pt;
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .gold-rule {
+      height: 1pt;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 1.5mm 0;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5mm;
+    }
+
+    .pill {
+      background: rgba(255, 255, 255, .1);
+      border: .5pt solid rgba(212, 175, 55, .4);
+      color: white;
+      padding: 1mm 3mm;
+      border-radius: 20pt;
+      font-size: 8.5pt;
+      font-family: Arial;
+    }
+
+    .circle-img {
+      width: 120px;
+      height: 150px;
+      display: block;
+      object-fit: contain;
+      transform: scale(1.5);
+      transform-origin: center;
+    }
+
+    /* BODY */
+    .body {
+      display: grid;
+      grid-template-columns: 60mm 1fr;
+      gap: 3mm;
+      padding: 3mm 5mm;
+      overflow: hidden;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2mm;
+    }
+
+    .sb-card {
+      background: var(--cream);
+      border: .5pt solid var(--gborder);
+      border-radius: 5pt;
+      padding: 2.5mm 3mm;
+      overflow: hidden;
+    }
+
+    .sb-ttl {
+      font-size: 8pt;
+      color: var(--gold);
+      letter-spacing: 2px;
+      font-family: Arial;
+      font-weight: bold;
+      margin-bottom: 1mm;
+    }
+
+    .fact-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 1mm 0;
+      border-bottom: .3pt solid rgba(212, 175, 55, .15);
+    }
+
+    .fl,
+    .fv {
+      font-size: 8.5pt;
+      font-family: Arial;
+    }
+
+    .fl {
+      color: var(--muted);
+    }
+
+    .fv {
+      color: var(--navy);
+      font-weight: bold;
+      text-align: right;
+    }
+
+    .chips-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5mm;
+    }
+
+    .chip {
+      background: var(--gold-pale);
+      border: .4pt solid rgba(212, 175, 55, .45);
+      padding: 1mm 2.5mm;
+      border-radius: 20pt;
+      font-size: 8.5pt;
+      font-family: Arial;
+      color: var(--navy);
+    }
+
+    /* MAIN AREA */
+    .main {
+      display: flex;
+      flex-direction: column;
+      gap: 2mm;
+    }
+
+    .card {
+      background: white;
+      border: .5pt solid var(--gborder);
+      border-radius: 6pt;
+      padding: 2.5mm 3mm;
+      position: relative;
+      overflow: hidden;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2.5pt;
+      height: 100%;
+      background: linear-gradient(180deg, var(--gold), var(--gold-lt));
+    }
+
+    .card-hdr {
+      display: flex;
+      align-items: center;
+      gap: 2mm;
+      margin-bottom: 1.5mm;
+      padding-bottom: 1mm;
+      border-bottom: .3pt solid rgba(212, 175, 55, .25);
+    }
+
+    .card-icon {
+      font-size: 11pt;
+      width: 7mm;
+      text-align: center;
+    }
+
+    .card-ttl {
+      font-size: 10pt;
+      font-weight: bold;
+      color: var(--navy);
+      font-family: Arial;
+    }
+
+    .g2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1mm 3mm;
+    }
+
+    .gi {
+      border-bottom: .3pt dashed rgba(212, 175, 55, .2);
+      padding: 1mm 0;
+    }
+
+    .gi-l {
+      font-size: 7.5pt;
+      color: var(--gold);
+      font-family: Arial;
+      font-weight: bold;
+      letter-spacing: .8px;
+    }
+
+    .gi-v {
+      font-size: 9.5pt;
+      color: var(--navy);
+      font-family: Arial;
+      margin-top: .5mm;
+    }
+
+    .fam-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5mm;
+    }
+
+    .fam-box {
+      background: var(--gold-pale);
+      border: .4pt solid rgba(212, 175, 55, .35);
+      border-radius: 4pt;
+      padding: 2mm;
+      break-inside: avoid;
+    }
+
+    .fam-role {
+      font-size: 7pt;
+      color: var(--gold);
+      font-family: Arial;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .fam-name {
+      font-size: 10pt;
+      font-weight: bold;
+      color: var(--navy);
+      font-family: Arial;
+    }
+
+    .fam-det {
+      font-size: 8pt;
+      color: var(--muted);
+      font-family: Arial;
+      margin-top: .5mm;
+    }
+
+    .timeline {
+      padding-left: 5mm;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 2mm;
+      top: 2mm;
+      bottom: 2mm;
+      width: 1pt;
+      background: linear-gradient(180deg, var(--gold), rgba(212, 175, 55, .2));
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 2mm;
+    }
+
+    .tl-dot {
+      position: absolute;
+      left: -4.5mm;
+      top: 1.5mm;
+      width: 5pt;
+      height: 5pt;
+      background: var(--gold);
+      border-radius: 50%;
+      border: 1pt solid white;
+    }
+
+    .tl-year {
+      font-size: 7.5pt;
+      color: var(--gold);
+      font-family: Arial;
+      font-weight: bold;
+    }
+
+    .tl-deg {
+      font-size: 10pt;
+      color: var(--navy);
+      font-weight: bold;
+      font-family: Arial;
+    }
+
+    .tl-inst {
+      font-size: 8.5pt;
+      color: var(--mid);
+      font-family: Arial;
+    }
+
+    .tl-grade {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 7.5pt;
+      padding: 1px 5px;
+      border-radius: 8pt;
+      font-family: Arial;
+    }
+
+    .con-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5mm;
+    }
+
+    .con-item {
+      background: var(--gold-pale);
+      border: .4pt solid rgba(212, 175, 55, .35);
+      border-radius: 4pt;
+      padding: 1.5mm 2mm;
+      display: flex;
+      gap: 1.5mm;
+      align-items: center;
+      break-inside: avoid;
+    }
+
+    .con-icon {
+      font-size: 10pt;
+    }
+
+    .con-l {
+      font-size: 7.5pt;
+      color: var(--muted);
+      font-family: Arial;
+    }
+
+    .con-v {
+      font-size: 8.5pt;
+      font-weight: bold;
+      color: var(--navy);
+      font-family: Arial;
+    }
+
+    /* FOOTER */
+    .ftr {
+      background: linear-gradient(135deg, #6e121d, #9f1f28);
+      text-align: center;
+      padding: 2mm;
+      font-size: 8.5pt;
+      color: rgba(255, 255, 255, .85);
+      font-family: Arial;
+      letter-spacing: 1px;
+    }
+
+    .ftr b {
+      color: #F4D36B;
+    }
+
+    /* BUTTONS */
+    .fab-wrap {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 999;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border-radius: 50px;
+      border: none;
+      font-size: 13px;
+      font-family: Arial;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* PRINT FIX */
+    @media print {
+
+      html,
+      body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+        background: white;
+        display: block;
+      }
+
+      .page {
+        width: 210mm;
+        height: 297mm;
+        max-height: 297mm;
+        margin: 0;
+        box-shadow: none;
+        overflow: hidden;
+      }
+
+      .fab-wrap {
+        display: none !important;
+      }
+
+      .card,
+      .sb-card,
+      .fam-box,
+      .con-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- GOLDEN FLOWER BORDER SVG -->
+    <svg class="flower-border" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 794 1123" preserveAspectRatio="none">
+      <defs>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="1" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+
+      <!-- OUTER RECTANGLE BORDER -->
+      <rect x="10" y="10" width="774" height="1103" fill="none" stroke="#D4AF37" stroke-width="2.5"
+        stroke-dasharray="none" />
+      <rect x="16" y="16" width="762" height="1091" fill="none" stroke="#F0D060" stroke-width="0.8" />
+      <rect x="22" y="22" width="750" height="1079" fill="none" stroke="#D4AF37" stroke-width="1.2"
+        stroke-dasharray="6,4" />
+
+      <!-- FLOWER MACRO: reusable group via use -->
+      <!-- Top edge flowers -->
+      <g filter="url(#glow)">
+        <!-- Top edge flower row -->
+        <g transform="translate(100,14)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(170,14)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(240,14)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(310,14)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(397,14)">
+          <circle r="6" fill="#D4AF37" />
+          <ellipse rx="4" ry="10" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="4" ry="10" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="4" ry="10" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="4" ry="10" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="4" fill="#F5D040" />
+        </g>
+        <g transform="translate(484,14)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(554,14)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(624,14)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(694,14)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+
+        <!-- Bottom edge flower row -->
+        <g transform="translate(100,1109)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(170,1109)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(240,1109)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(310,1109)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(397,1109)">
+          <circle r="6" fill="#D4AF37" />
+          <ellipse rx="4" ry="10" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="4" ry="10" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="4" ry="10" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="4" ry="10" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="4" fill="#F5D040" />
+        </g>
+        <g transform="translate(484,1109)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(554,1109)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(624,1109)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(694,1109)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+
+        <!-- Left edge flower column -->
+        <g transform="translate(14,100)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(14,185)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(14,270)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(14,355)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(14,440)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(14,561)">
+          <circle r="6" fill="#D4AF37" />
+          <ellipse rx="4" ry="10" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="4" ry="10" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="4" ry="10" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="4" ry="10" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="4" fill="#F5D040" />
+        </g>
+        <g transform="translate(14,682)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(14,767)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(14,852)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(14,937)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(14,1022)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+
+        <!-- Right edge flower column -->
+        <g transform="translate(780,100)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(780,185)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(780,270)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(780,355)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(780,440)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(780,561)">
+          <circle r="6" fill="#D4AF37" />
+          <ellipse rx="4" ry="10" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="4" ry="10" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="4" ry="10" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="4" ry="10" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="4" fill="#F5D040" />
+        </g>
+        <g transform="translate(780,682)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(780,767)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(780,852)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(780,937)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+        <g transform="translate(780,1022)">
+          <circle r="5" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(0)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(45)" fill="#D4AF37" />
+          <ellipse rx="3.5" ry="8" transform="rotate(90)" fill="#C9A227" />
+          <ellipse rx="3.5" ry="8" transform="rotate(135)" fill="#D4AF37" />
+          <circle r="3" fill="#F5D040" />
+        </g>
+
+        <!-- BIG CORNER FLOWERS -->
+        <!-- Top-Left -->
+        <g transform="translate(38,38)">
+          <circle r="10" fill="#D4AF37" />
+          <ellipse rx="7" ry="18" transform="rotate(0)" fill="#C9A227" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(30)" fill="#D4AF37" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(60)" fill="#C9A227" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(90)" fill="#D4AF37" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(120)" fill="#C9A227" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(150)" fill="#D4AF37" opacity="0.9" />
+          <circle r="7" fill="#F5D040" />
+          <circle r="3" fill="#D4AF37" />
+        </g>
+        <!-- Top-Right -->
+        <g transform="translate(756,38)">
+          <circle r="10" fill="#D4AF37" />
+          <ellipse rx="7" ry="18" transform="rotate(0)" fill="#C9A227" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(30)" fill="#D4AF37" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(60)" fill="#C9A227" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(90)" fill="#D4AF37" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(120)" fill="#C9A227" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(150)" fill="#D4AF37" opacity="0.9" />
+          <circle r="7" fill="#F5D040" />
+          <circle r="3" fill="#D4AF37" />
+        </g>
+        <!-- Bottom-Left -->
+        <g transform="translate(38,1085)">
+          <circle r="10" fill="#D4AF37" />
+          <ellipse rx="7" ry="18" transform="rotate(0)" fill="#C9A227" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(30)" fill="#D4AF37" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(60)" fill="#C9A227" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(90)" fill="#D4AF37" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(120)" fill="#C9A227" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(150)" fill="#D4AF37" opacity="0.9" />
+          <circle r="7" fill="#F5D040" />
+          <circle r="3" fill="#D4AF37" />
+        </g>
+        <!-- Bottom-Right -->
+        <g transform="translate(756,1085)">
+          <circle r="10" fill="#D4AF37" />
+          <ellipse rx="7" ry="18" transform="rotate(0)" fill="#C9A227" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(30)" fill="#D4AF37" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(60)" fill="#C9A227" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(90)" fill="#D4AF37" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(120)" fill="#C9A227" opacity="0.9" />
+          <ellipse rx="7" ry="18" transform="rotate(150)" fill="#D4AF37" opacity="0.9" />
+          <circle r="7" fill="#F5D040" />
+          <circle r="3" fill="#D4AF37" />
+        </g>
+
+        <!-- Vine/stem connecting dots on top -->
+        <path
+          d="M38,14 Q70,8 100,14 Q135,8 170,14 Q205,8 240,14 Q275,8 310,14 Q353,6 397,14 Q440,6 484,14 Q519,8 554,14 Q589,8 624,14 Q659,8 694,14 Q726,8 756,14"
+          fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.5" />
+        <!-- Vine/stem connecting dots on bottom -->
+        <path
+          d="M38,1109 Q70,1115 100,1109 Q135,1115 170,1109 Q205,1115 240,1109 Q275,1115 310,1109 Q353,1117 397,1109 Q440,1117 484,1109 Q519,1115 554,1109 Q589,1115 624,1109 Q659,1115 694,1109 Q726,1115 756,1109"
+          fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.5" />
+        <!-- Vine left -->
+        <path
+          d="M14,38 Q8,70 14,100 Q8,142 14,185 Q8,227 14,270 Q8,312 14,355 Q8,397 14,440 Q6,500 14,561 Q6,621 14,682 Q8,724 14,767 Q8,809 14,852 Q8,894 14,937 Q8,979 14,1022 Q8,1053 14,1085"
+          fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.5" />
+        <!-- Vine right -->
+        <path
+          d="M780,38 Q786,70 780,100 Q786,142 780,185 Q786,227 780,270 Q786,312 780,355 Q786,397 780,440 Q788,500 780,561 Q788,621 780,682 Q786,724 780,767 Q786,809 780,852 Q786,894 780,937 Q786,979 780,1022 Q786,1053 780,1085"
+          fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.5" />
+
+        <!-- Small leaf accents on vine top -->
+        <ellipse cx="135" cy="10" rx="8" ry="4" transform="rotate(-15 135 10)" fill="#D4AF37" opacity="0.4" />
+        <ellipse cx="205" cy="10" rx="8" ry="4" transform="rotate(15 205 10)" fill="#D4AF37" opacity="0.4" />
+        <ellipse cx="275" cy="10" rx="8" ry="4" transform="rotate(-15 275 10)" fill="#D4AF37" opacity="0.4" />
+        <ellipse cx="440" cy="10" rx="8" ry="4" transform="rotate(15 440 10)" fill="#D4AF37" opacity="0.4" />
+        <ellipse cx="519" cy="10" rx="8" ry="4" transform="rotate(-15 519 10)" fill="#D4AF37" opacity="0.4" />
+        <ellipse cx="589" cy="10" rx="8" ry="4" transform="rotate(15 589 10)" fill="#D4AF37" opacity="0.4" />
+        <ellipse cx="659" cy="10" rx="8" ry="4" transform="rotate(-15 659 10)" fill="#D4AF37" opacity="0.4" />
+        <!-- Small leaf accents bottom -->
+        <ellipse cx="135" cy="1113" rx="8" ry="4" transform="rotate(15 135 1113)" fill="#D4AF37" opacity="0.4" />
+        <ellipse cx="205" cy="1113" rx="8" ry="4" transform="rotate(-15 205 1113)" fill="#D4AF37" opacity="0.4" />
+        <ellipse cx="275" cy="1113" rx="8" ry="4" transform="rotate(15 275 1113)" fill="#D4AF37" opacity="0.4" />
+        <ellipse cx="440" cy="1113" rx="8" ry="4" transform="rotate(-15 440 1113)" fill="#D4AF37" opacity="0.4" />
+        <ellipse cx="519" cy="1113" rx="8" ry="4" transform="rotate(15 519 1113)" fill="#D4AF37" opacity="0.4" />
+        <ellipse cx="589" cy="1113" rx="8" ry="4" transform="rotate(-15 589 1113)" fill="#D4AF37" opacity="0.4" />
+        <ellipse cx="659" cy="1113" rx="8" ry="4" transform="rotate(15 659 1113)" fill="#D4AF37" opacity="0.4" />
+      </g>
+    </svg>
+    <div class="content">
+
+      <!-- HEADER -->
+      <div class="hdr">
+        <div class="photo-ring" onclick="document.getElementById('pu').click()" title="Click to upload photo">
+          <div class="photo-inner" id="photoBox">
+            <img id="photoImg" alt="Profile" />
+            <div class="photo-ph" id="photoPh"><span>👤</span>PHOTO</div>
+          </div>
+        </div>
+        <input type="file" id="pu" accept="image/*" style="display:none" onchange="loadPic(event)" />
+        <div class="hdr-info">
+          <div class="hdr-eyebrow">✦ &nbsp; Marriage Biodata &nbsp; ✦</div>
+          <div class="hdr-name" contenteditable="true">Lalita Kumari</div>
+          <div class="hdr-sub" contenteditable="true">B.Com (Honours) Student &nbsp;·&nbsp; ARKA JAIN University,
+            Jamshedpur</div>
+          <div class="gold-rule"></div>
+          <div class="pills">
+            <span class="pill">📍 <span contenteditable="true">Dhanbad, Jharkhand</span></span>
+            <span class="pill">🎂 <span contenteditable="true">Born 10 July 2006</span></span>
+            <span class="pill">🩸 <span contenteditable="true">B+</span></span>
+          </div>
+        </div>
+        <div><img src="Assets/Ganesh.png" alt="" class="circle-img"></div>
+      </div>
+
+      <!-- BODY -->
+      <div class="body">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+
+          <div class="sb-card">
+            <div class="sb-ttl">🕉 LINEAGE</div>
+            <div class="fact-row"><span class="fl">Religion</span><span class="fv" contenteditable="true">Hindu</span>
+            </div>
+            <div class="fact-row"><span class="fl">Caste</span><span class="fv"
+                contenteditable="true">Yadav(Gwala)</span></div>
+            <div class="fact-row"><span class="fl">Mother Tongue</span><span class="fv"
+                contenteditable="true">Hindi</span></div>
+          </div>
+
+          <div class="sb-card">
+            <div class="sb-ttl">🎓 EDUCATION SNAPSHOT</div>
+            <div class="fact-row"><span class="fl">Status</span><span class="fv" contenteditable="true">Student</span>
+            </div>
+            <div class="fact-row"><span class="fl">Course</span><span class="fv" contenteditable="true">B.Com
+                Honours</span></div>
+            <div class="fact-row"><span class="fl">University</span><span class="fv" contenteditable="true">ARKA JAIN
+                University</span></div>
+            <div class="fact-row"><span class="fl">Location</span><span class="fv" contenteditable="true">Jamshedpur,
+                Jharkhand</span></div>
+            <div class="fact-row"><span class="fl">Year</span><span class="fv" contenteditable="true">2nd Year /
+                2026</span></div>
+          </div>
+
+          <div class="sb-card">
+            <div class="sb-ttl">🌐 LANGUAGES</div>
+            <div class="chips-row">
+              <span class="chip" contenteditable="true">Hindi</span>
+              <span class="chip" contenteditable="true">English</span>
+            </div>
+          </div>
+
+          <div class="sb-card">
+            <div class="sb-ttl">✨ HOBBIES & INTERESTS</div>
+            <div class="chips-row">
+              <span class="chip" contenteditable="true">🌍 Travel</span>
+              <span class="chip" contenteditable="true">🍳 Cooking</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- MAIN -->
+        <div class="main">
+
+          <div class="card">
+            <div class="card-hdr">
+              <div class="card-icon">👤</div>
+              <div class="card-ttl">Personal Information</div>
+            </div>
+            <div class="g2">
+              <div class="gi">
+                <div class="gi-l">Full Name</div>
+                <div class="gi-v" contenteditable="true">Lalita Kumari</div>
+              </div>
+              <div class="gi">
+                <div class="gi-l">Gender</div>
+                <div class="gi-v" contenteditable="true">Female</div>
+              </div>
+              <div class="gi">
+                <div class="gi-l">Date of Birth</div>
+                <div class="gi-v" contenteditable="true">10 July 2006</div>
+              </div>
+              <div class="gi">
+                <div class="gi-l">Place of Birth</div>
+                <div class="gi-v" contenteditable="true">Dhanbad, Jharkhand</div>
+              </div>
+              <div class="gi">
+                <div class="gi-l">Height</div>
+                <div class="gi-v" contenteditable="true">5'3"</div>
+              </div>
+              <div class="gi">
+                <div class="gi-l">Blood Group</div>
+                <div class="gi-v" contenteditable="true">B+</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-hdr">
+              <div class="card-icon">🏡</div>
+              <div class="card-ttl">Family Details</div>
+            </div>
+            <div class="fam-grid">
+              <div class="fam-box">
+                <div class="fam-role">Father</div>
+                <div class="fam-name" contenteditable="true">Mr. Kokil Gope</div>
+                <div class="fam-det" contenteditable="true">BCCL Employee</div>
+              </div>
+              <div class="fam-box">
+                <div class="fam-role">Mother</div>
+                <div class="fam-name" contenteditable="true">Mrs. Latwa Devi</div>
+                <div class="fam-det" contenteditable="true">Homemaker</div>
+              </div>
+              <div class="fam-box">
+                <div class="fam-role">Elder Brother</div>
+                <div class="fam-name" contenteditable="true">Ravi Shankar Yadav</div>
+                <div class="fam-det" contenteditable="true">Software Engineer</div>
+              </div>
+              <div class="fam-box">
+                <div class="fam-role">Elder Brother</div>
+                <div class="fam-name" contenteditable="true">Abhishek Kumar</div>
+                <div class="fam-det" contenteditable="true">Software Engineer</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-hdr">
+              <div class="card-icon">🎓</div>
+              <div class="card-ttl">Education</div>
+            </div>
+            <div class="timeline">
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year" contenteditable="true">2025 – Present</div>
+                <div class="tl-deg" contenteditable="true">B.Com Honours with Research</div>
+                <div class="tl-inst" contenteditable="true">ARKA JAIN University (AJU), Jamshedpur</div>
+                <span class="tl-grade" contenteditable="true">2nd Year</span>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year" contenteditable="true">2024-25</div>
+                <div class="tl-deg" contenteditable="true">Class XII – Commerce</div>
+                <div class="tl-inst" contenteditable="true">DAV Model School, C.F.R.I, Dhanbad</div>
+                <span class="tl-grade" contenteditable="true">60%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-hdr">
+              <div class="card-icon">📞</div>
+              <div class="card-ttl">Contact Information</div>
+            </div>
+            <div class="con-grid">
+              <div class="con-item"><span class="con-icon">📍</span>
+                <div>
+                  <div class="con-l">Hometown Address</div>
+                  <div class="con-v" contenteditable="true">NBCC Colony Nunudih, Dhanbad</div>
+                </div>
+              </div>
+              <div class="con-item"><span class="con-icon">☎️</span>
+                <div>
+                  <div class="con-l">Father's Contact</div>
+                  <div class="con-v" contenteditable="true">+91 89866 34655</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="ftr">🙏 &nbsp; <b>ॐ श्री गणेशाय नमः</b></div>
+    </div>
+  </div>
+
+  <!-- FLOATING BUTTONS -->
+  <div class="fab-wrap">
+    <button class="btn" onclick="printPDF()" style="background:#D4AF37;color:#0F172A;">🖨 Download as PDF</button>
+    <button class="btn" onclick="downloadHTML()" style="background:#0F172A;color:#D4AF37;">⬇ Save HTML</button>
+    <button class="btn" onclick="resetData()" style="background:#fff;color:#0F172A;border:1px solid #ccc;">🔄 Reset
+      Sample</button>
+  </div>
+
+  <script>
+    function loadPic(e) {
+      const f = e.target.files[0]; if (!f) return;
+      const r = new FileReader();
+      r.onload = ev => {
+        document.getElementById('photoImg').src = ev.target.result;
+        document.getElementById('photoImg').style.display = 'block';
+        document.getElementById('photoPh').style.display = 'none';
+      };
+      r.readAsDataURL(f);
+    }
+
+    function printPDF() {
+      const style = document.createElement('style');
+      style.id = 'print-override';
+      style.textContent = '@page{size:A4 portrait;margin:0;}';
+      document.head.appendChild(style);
+      window.print();
+      setTimeout(() => { const s = document.getElementById('print-override'); if (s) s.remove(); }, 1000);
+    }
+
+    function downloadHTML() {
+      const html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+      const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      const name = (document.querySelector('.hdr-name') || {}).textContent || 'biodata';
+      a.download = name.trim().replace(/\s+/g, '_') + '_biodata.html';
+      document.body.appendChild(a); a.click();
+      document.body.removeChild(a); URL.revokeObjectURL(url);
+    }
+
+    const saved = {};
+    window.addEventListener('load', () => {
+      document.querySelectorAll('[contenteditable]').forEach((el, i) => { saved[i] = el.innerHTML; });
+    });
+    function resetData() {
+      if (!confirm('Reset all fields to sample data?')) return;
+      document.querySelectorAll('[contenteditable]').forEach((el, i) => { if (saved[i] !== undefined) el.innerHTML = saved[i]; });
+      document.getElementById('photoImg').style.display = 'none';
+      document.getElementById('photoPh').style.display = '';
+    }
+  </script>
+
+</body>
+
+</html>
